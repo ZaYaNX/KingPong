@@ -1,22 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class PlayerPaddleController : MonoBehaviour {
-	public int Speed = 10;
+using UnityEngine.Networking;
+
+public class PlayerPaddleController : NetworkBehaviour {
+	public float Speed = 0.5f;
 	Rigidbody body;
-	// Use this for initialization
+    Vector3 movement;
+    [SerializeField]
+    Camera camera;
+
+	
 	void Start () 
 	{
 		body = gameObject.GetComponent<Rigidbody> ();
 	}
-	// Update is called once per frame
+	
 	void Update () 
 	{
 		Vector3 movement = new Vector3(Input.GetAxis("Horizontal") * Speed,0,0);
-		body.velocity = movement;
+        body.velocity = movement;
 	}
 
-	void FixedUpdate()
-	{
-		
-	}
+    public override void OnStartLocalPlayer()
+    {
+        camera.gameObject.SetActive(true);
+    }
 }

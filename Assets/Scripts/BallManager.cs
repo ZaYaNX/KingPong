@@ -6,7 +6,7 @@ using UnityEngine;
 public class BallManager : MonoBehaviour
 {
 
-    private Vector3 v = new Vector3(5.0f, 0.0f, 5.0f);
+    private Vector3 v = new Vector3(2.0f, 0.0f, 2.0f);
     Rigidbody body;
 
     private void Start()
@@ -21,11 +21,11 @@ public class BallManager : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.collider.name == "Player" || collision.collider.name == "Player2")
-            v.x = -v.x;
-
+        if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
+            v.z = -1 * v.z;
+        
         else if (collision.collider.name == "Wall_1" || collision.collider.name == "Wall_2")
-            v.z = -v.z;
+            v.x = -1 * v.x;
     }
 
 }

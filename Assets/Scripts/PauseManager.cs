@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class Pause : MonoBehaviour
+using UnityEngine.Networking;
+
+public class PauseManager : MonoBehaviour
 
 {
     [SerializeField]
@@ -22,12 +24,12 @@ public class Pause : MonoBehaviour
         if (Paused)
         {
             PauseUI.SetActive(true);
-            Time.timeScale = 0;
+
         }
         if (!Paused)
         {
             PauseUI.SetActive(false);
-            Time.timeScale = 1;
+
         }
     }
 
@@ -36,14 +38,16 @@ public class Pause : MonoBehaviour
         Paused = false;
     }
 
-    public void Menu()
+    public void Disconnect()
     {
-        SceneManager.LoadScene("Lobby");
-        Paused = false;
+        if (Network.isServer)
+        {
+            NetworkManager.singleton.StopHost();
+        }
+        else
+        {
+            NetworkManager.singleton.StopClient();
+        }
     }
 
-    public void Quitter()
-    {
-        Application.Quit();
-    }
-}
+}   
