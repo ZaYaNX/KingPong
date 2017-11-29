@@ -11,7 +11,7 @@ public class DeadZone : MonoBehaviour
         BallManager ball = collision.gameObject.GetComponent<BallManager>();
         if (ball != null)
         {
-            ball.transform.position = new Vector3(0.0f, 0.0f, 0.0f);
+            ball.transform.position = new Vector3(0.0f, 0.2f, 0.0f);
         }
     }
 }

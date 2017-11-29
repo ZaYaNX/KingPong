@@ -24,9 +24,11 @@ GameObject:
   - component: {fileID: 23837502099022888}
   - component: {fileID: 54726104061778226}
   - component: {fileID: 114035658646918316}
+  - component: {fileID: 114233083489779180}
+  - component: {fileID: 114357774134644484}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +98,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!114 &114035658646918316
 MonoBehaviour:
@@ -109,6 +111,59 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a5b01524e09cb479422d38b2a6e1c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114233083489779180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999067398063804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 171
+    i1: 21
+    i2: 131
+    i3: 226
+    i4: 9
+    i5: 15
+    i6: 223
+    i7: 228
+    i8: 171
+    i9: 149
+    i10: 200
+    i11: 245
+    i12: 79
+    i13: 105
+    i14: 6
+    i15: 162
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
+--- !u!114 &114357774134644484
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1999067398063804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
 --- !u!135 &135891551097015750
 SphereCollider:
   m_ObjectHideFlags: 1
