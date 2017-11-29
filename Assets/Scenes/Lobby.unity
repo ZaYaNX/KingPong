@@ -2079,6 +2079,11 @@ Prefab:
         type: 2}
       propertyPath: camera
       value: 
+      objectReference: {fileID: 1989435302}
+    - target: {fileID: 114065312639158028, guid: 0d65c7a6b2c03b849827ca84122315aa,
+        type: 2}
+      propertyPath: m_LocalPlayerAuthority
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0d65c7a6b2c03b849827ca84122315aa, type: 2}
